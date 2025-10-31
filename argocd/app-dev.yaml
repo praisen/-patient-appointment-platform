@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: YOUR_GITHUB_REPO_HTTPS
+    repoURL: https://github.com/praisen/-patient-appointment-platform
     path: k8s/overlays/dev
     targetRevision: HEAD
   destination:
