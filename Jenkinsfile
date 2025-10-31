@@ -1,10 +1,10 @@
 pipeline {
   agent any
   environment {
-    DOCKERHUB_ORG = 'YOUR_DOCKERHUB_USER'
+    DOCKERHUB_ORG = 'praisen'
     BACKEND_IMAGE = "docker.io/${DOCKERHUB_ORG}/patientapp-backend"
     FRONTEND_IMAGE = "docker.io/${DOCKERHUB_ORG}/patientapp-frontend"
-    GIT_REPO_HTTPS = 'YOUR_GITHUB_REPO_HTTPS'
+    GIT_REPO_HTTPS = 'https://github.com/praisen/-patient-appointment-platform'
   }
   options { timestamps() }
   stages {
