@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: patientapp-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: YOUR_GITHUB_REPO_HTTPS
+    path: k8s/overlays/dev
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: patientapp-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
